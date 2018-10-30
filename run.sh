@@ -15,7 +15,7 @@
     out="$out$line\n"
   done
   echo -e "$out" | column -t > pars.txt
-  cmds=( "g++ H1B_breakdown.cpp -o H1B -std=c++11"
+  cmds=( "g++ src/H1B_breakdown.cpp -o H1B -std=c++11"
          "./H1B pars.txt"
        )
   for cmd in "${cmds[@]}"
